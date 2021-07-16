@@ -77,10 +77,7 @@ def three(a):
     for i in range(4):
         b += str(a)
         a_list.append(int(b))
-   
     return sum(a_list)
-
-    
 
     # <QUESTION 4>
 
@@ -153,6 +150,7 @@ def six(string):
 		return True
 	else:
 		return False
+        
     # <QUESTION 7>
 
     # Given three ints, a b c, one of them is small, one is medium and one is large. 
@@ -175,7 +173,15 @@ def six(string):
     # Use the cli to access the documentation help(list.sort)
 
 def seven(a, b, c):
-    return False
+	numList = [a,b,c]
+	numList.sort()
+	difference = 0 
+	difference = numList[1] - numList[0]
+	difference -= numList[2] - numList[1]
+	if difference ==0:
+		return True
+	else:
+		return False
 
     # <QUESTION 8>
 
@@ -193,7 +199,11 @@ def seven(a, b, c):
     # Use the cli to access the documentation help(str.replace)
 
 def eight(string, num):
-    return ""
+	word = string
+	for i in range(num):
+		middle = len(word)//2
+		word = word[:middle] + word[(middle + 1):]
+	return word
 
     # <QUESTION 9>
 
@@ -210,7 +220,17 @@ def eight(string, num):
     # There are no hints for this question.
 
 def nine(string1, string2):
-    return False
+    s1 = 0
+    sorted_string1 = sorted(string1.lower())
+    sorted_string2 = sorted(string2.lower())
+    for char in sorted_string2:
+        if char in sorted_string1:
+            s1 += 1
+    if s1 >= len(string1) or s1 >= len(string2):
+        return(True)
+    else:
+        return(False)
+
 
     # <QUESTION 10>
 
@@ -228,4 +248,8 @@ def nine(string1, string2):
     # Think about nesting for loops.
 
 def ten(a, b):
-    return []
+	array = [[0 for i in range(a)] for j in range(b)]
+	for j in range(b):
+		for i in range(a):
+			array[j][i] = i * j
+	return array
