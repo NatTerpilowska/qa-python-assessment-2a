@@ -71,7 +71,15 @@ def two(num):
     # What happens if you multiply a string by a number?
 
 def three(a):
-    return 1
+    a_list = []
+    b = str()
+    for i in range(4):
+        b += str(a)
+        a_list.append(int(b))
+   
+    return sum(a_list)
+
+    
 
     # <QUESTION 4>
 
