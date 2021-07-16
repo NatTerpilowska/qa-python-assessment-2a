@@ -1,3 +1,4 @@
+import random
     # INSTRUCTIONS
 
     # In case it is not clear, the Question appears first, then examples, then any hints and finally the function that you need to complete appears underneath:
@@ -108,7 +109,10 @@ def three(a):
     # How would you seperate a string into characters?
 
 def four(string1, string2):
-    return ""
+	phrase = ""
+	for i in range(len(string1)):
+		phrase = phrase + string1[i] + string2[i]
+	return phrase
 
     # <QUESTION 5>
 
@@ -125,7 +129,7 @@ def four(string1, string2):
     # The random module contains a function called randint.
 
 def five():
-    return []
+	return(random.sample([i for i in range(100,201) if i%2==0], 5))
 
     # <QUESTION 6>
 
