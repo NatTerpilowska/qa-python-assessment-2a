@@ -33,7 +33,7 @@ import random
 def one(string):
 	word = ''
 	for i in range(len(string)):
-		word = word + string[i]  + string[i]  + string[i]
+        	word = word + string[i]  + string[i]  + string[i]
 	return word
 
     # <QUESTION 2>
