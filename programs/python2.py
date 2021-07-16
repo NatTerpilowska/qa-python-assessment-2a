@@ -150,7 +150,7 @@ def six(string):
 		return True
 	else:
 		return False
-        
+
     # <QUESTION 7>
 
     # Given three ints, a b c, one of them is small, one is medium and one is large. 
@@ -173,15 +173,11 @@ def six(string):
     # Use the cli to access the documentation help(list.sort)
 
 def seven(a, b, c):
-	numList = [a,b,c]
-	numList.sort()
-	difference = 0 
-	difference = numList[1] - numList[0]
-	difference -= numList[2] - numList[1]
-	if difference ==0:
-		return True
-	else:
-		return False
+    num = [a, b, c]
+    num.sort()
+    if (num[1] - num[0]) == (num[2] - num[1]):
+        return True
+    return False
 
     # <QUESTION 8>
 
@@ -220,9 +216,11 @@ def eight(string, num):
     # There are no hints for this question.
 
 def nine(string1, string2):
+    
     s1 = 0
     sorted_string1 = sorted(string1.lower())
     sorted_string2 = sorted(string2.lower())
+
     for char in sorted_string2:
         if char in sorted_string1:
             s1 += 1
@@ -248,8 +246,8 @@ def nine(string1, string2):
     # Think about nesting for loops.
 
 def ten(a, b):
-	array = [[0 for i in range(a)] for j in range(b)]
-	for j in range(b):
-		for i in range(a):
-			array[j][i] = i * j
+	array = [[0 for aa in range(a)] for bb in range(b)]
+	for bb in range(b):
+		for aa in range(a):
+			array[bb][aa] = aa * bb
 	return array
