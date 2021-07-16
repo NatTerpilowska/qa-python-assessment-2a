@@ -30,7 +30,10 @@
     # How does a for loop iterate through a string?
 
 def one(string):
-    return ""
+	word = ''
+	for i in range(len(string)):
+		word = word + string[i]  + string[i]  + string[i]
+	return word
 
     # <QUESTION 2>
 
@@ -48,7 +51,10 @@ def one(string):
     # Use your CLI to access the Python documentation and get help manipulating strings - help(range).
 
 def two(num):
-    return False
+    for i in range (2, num):
+        if num % i == 0:
+            return False
+    return True
 
     # <QUESTION 3>
 
