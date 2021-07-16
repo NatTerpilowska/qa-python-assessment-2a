@@ -148,8 +148,11 @@ def five():
     # There are no hints for this question.
     
 def six(string):
-    return False
-
+	word = string.casefold()
+	if word.endswith('py'):
+		return True
+	else:
+		return False
     # <QUESTION 7>
 
     # Given three ints, a b c, one of them is small, one is medium and one is large. 
